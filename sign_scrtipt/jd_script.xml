@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL></TemplateURL>
+  <Beta>False</Beta>
+  <Category>Tools:Script</Category>
+  <Name>JDScripts</Name>
+  <Description>
+    [b]京东薅羊毛工具[/b][br/][br/]
+    
+    [b]注意环境变量填写值的时候一律不需要引号（""或者''）下面这些只是事例，根据自己的需求增加删除[/b][br/]
+    * JD_COOKIE: jd cookies  例: JD_COOKIE=pt_key=XXX;pt_pin=XXX[br/]
+    * PUSH_KEY: 微信server酱通[br/]
+    * BARK_PUSH: Bark App通知[br/]
+    * TG_BOT_TOKEN: telegram机器人通知token[br/]
+    * TG_USER_ID: telegram机器人通知userID[br/]
+    * DD_BOT_TOKEN: 钉钉机器人通知token[br/]
+    * DD_BOT_SECRET: 钉钉机器人通知userID[br/]
+    * QYWX_KEY: 企业微信机器人通知[br/]
+    * PLANT_BEAN_SHARECODES: 京东种豆得豆[br/]
+    * FRUITSHARECODES: 京东农场的互助码[br/]
+    * PETSHARECODES: 东东萌宠的互助码[br/]
+    * JOY_FEED_COUNT: 宠汪汪的喂食数量[br/]
+    * MARKET_COIN_TO_BEANS: 兑换多少数量的京豆（20，或者1000京豆,或者其他奖品的文字）[br/]
+    * JD_DEBUG: 是否开启debug模式打印日志 例: JD_DEBUG=false[br/]
+    * CUSTOM_LIST_FILE: 使用自定义定任务追加默认任务之后，上面volumes挂载之后这里配置对应的文件名 默认值：my_crontab_list.sh[br/]
+    [br/]
+    
+  </Description>
+  <Overview>
+    京东薅羊毛工具
+  </Overview>
+  <Registry>https://hub.docker.com/r/akyakya/jd_scripts/</Registry>
+  <GitHub>https://github.com/lxk0301/jd_scripts</GitHub>
+  <Repository>akyakya/jd_scripts</Repository>
+  <Support>https://github.com/charleyzhu/docker-templates/</Support>
+  <Project>https://github.com/lxk0301/jd_scripts</Project>
+  <Changes>
+    [font size=3]2021.01.08[/font]
+     - first commit
+  </Changes>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+      <Mode>bridge</Mode>
+      <Publish/>
+    </Networking>
+  <Environment>
+    <Variable>
+      <Name>JD_COOKIE</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>PUSH_KEY</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>BARK_PUSH</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>TG_BOT_TOKEN</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>TG_USER_ID</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>DD_BOT_TOKEN</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>DD_BOT_SECRET</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>QYWX_KEY</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>PLANT_BEAN_SHARECODES</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>FRUITSHARECODES</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>PETSHARECODES</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>JOY_FEED_COUNT</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>MARKET_COIN_TO_BEANS</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>JD_DEBUG</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>CUSTOM_LIST_FILE</Name>
+      <Value>my_crontab_list.sh</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/JD_Scripts/logs</HostDir>
+      <ContainerDir>/scripts/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://s3.ax1x.com/2021/01/08/sukXE4.jpg</Icon>
+</Containers>
